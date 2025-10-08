@@ -22,6 +22,17 @@ while true {
     int choice = -1;
     int num = gen.Next(0, max);
     do while (choice != num) {
-        Console.Write("")
-    }
+            Console.Write("enter a number>  ");
+            choice = Convert.ToInt32(Console.ReadLine());
+            //determine if it is greater or less than the number
+            if (choice > num)
+            {
+                Console.WriteLine("Too high, try again.")
+            }
+            else if (choice < num)
+            {
+                Console.WriteLine("Too low, try again.")
+            }
+        }
+    Console.WriteLine("You Win!")
 }
