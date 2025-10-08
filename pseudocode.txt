@@ -1,0 +1,11 @@
+while true
+    ask difficulty 
+    sets max range
+    generates a new random number
+    do while guess != number:
+        guess
+        if guess > number:
+            say too hi
+        else if guess < number:
+            say too low
+    say congrats, you win
