@@ -11,6 +11,7 @@ while (true)
     //sets the max random number
     int diff = Convert.ToInt32(Console.ReadLine());
     int max = 0;
+    //set difficulty
     if (diff == 1)
     {
         max = 10;
@@ -40,4 +41,5 @@ while (true)
         }
     } while (choice != num);
     Console.WriteLine("You Win!");
+
 }
