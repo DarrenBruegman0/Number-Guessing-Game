@@ -7,20 +7,27 @@ while (true)
     Console.WriteLine("1)   easy");
     Console.WriteLine("2)   medium");
     Console.WriteLine("3)   hard");
-    Console.Write("Which difficulty?    ");
     //sets the max random number
-    int diff = Convert.ToInt32(Console.ReadLine());
+    string diffString = "";
+    int diff = 0;
+    while (diff > 3 || diff < 1)
+    {
+    Console.Write("Which difficulty?    ");
+    diffString = Console.ReadLine();
+    int.TryParse(diffString, out diff);
+    }
+
     int max = 0;
     //set difficulty
     if (diff == 1)
     {
         max = 10;
     }
-    else if (diff == 1)
+    else if (diff == 2)
     {
         max = 50;
     }
-    else if (diff == 1)
+    else if (diff == 3)
     {
         max = 100;
     }
@@ -28,8 +35,12 @@ while (true)
     int num = gen.Next(0, max);
     do
     {
-        Console.Write("enter a number>  ");
-        choice = Convert.ToInt32(Console.ReadLine());
+        string c = "";
+        while (!int.TryParse(c, out choice))
+        {
+            Console.Write("enter a number>  ");
+            c = Console.ReadLine();
+        }
         //determine if it is greater or less than the number
         if (choice > num)
         {
